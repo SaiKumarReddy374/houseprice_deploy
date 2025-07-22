@@ -46,7 +46,7 @@ const PredictForm = () => {
     setError(null);
 
     try {
-      const res = await axios.post('http://localhost:5000/predict', formData);
+      const res = await axios.post('https://houseprice-deploy-model.onrender.com/predict', formData);
       setPrediction(res.data.prediction);
     } catch (error) {
       setError('Failed to get prediction. Please try again.');
